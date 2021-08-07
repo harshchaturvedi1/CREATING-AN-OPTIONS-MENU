@@ -42,6 +42,10 @@ readline1.question('Enter your Cohice : ', (n) => {
                 options()
             })
         }
+        else {
+            console.log("You have selected an invalid entry so please press 1, 2 or 3")
+            options()
+        }
         readline1.on('line', (u) => {
 
             if (u == 3) {
@@ -61,6 +65,10 @@ readline1.question('Enter your Cohice : ', (n) => {
                     eventEmitter.emit('addBooks', { book });
                     options()
                 })
+            }
+            else {
+                console.log("You have selected an invalid entry so please press 1, 2 or 3")
+                options()
             }
 
         })
