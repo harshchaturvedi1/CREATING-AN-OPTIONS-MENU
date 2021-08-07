@@ -42,10 +42,13 @@ readline1.question('Enter your Cohice : ', (n) => {
                 options()
             })
         }
+
+
         else {
-            console.log("You have selected an invalid entry so please press 1, 2 or 3")
-            options()
+            console.log("You have selected an invalid entry please press 1, 2 or 3");
+            options();
         }
+
         readline1.on('line', (u) => {
 
             if (u == 3) {
@@ -53,7 +56,7 @@ readline1.question('Enter your Cohice : ', (n) => {
                     if (ans == 'Y')
                         readline1.close();
                     else
-                        options()
+                        options();
                 })
             }
             else if (u == 1) {
@@ -63,12 +66,12 @@ readline1.question('Enter your Cohice : ', (n) => {
             else if (u == 2) {
                 readline1.question('enter book name : ', (book) => {
                     eventEmitter.emit('addBooks', { book });
-                    options()
+                    options();
                 })
             }
             else {
-                console.log("You have selected an invalid entry so please press 1, 2 or 3")
-                options()
+                console.log("You have selected an invalid entry please press 1, 2 or 3")
+                options();
             }
 
         })
